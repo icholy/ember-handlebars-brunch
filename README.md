@@ -1,7 +1,7 @@
 ## Ember Handlebars for Brunch
 
 This plugin adds [Ember Handlebars](http://emberjs.com/) template pre-compiling to
-[brunch](http://brunch.io), utilizing the latest and greatest EmberJS build (compatible with the new ember v2 router).
+[brunch](http://brunch.io), utilizing the latest and greatest EmberJS build (compatible with the new ember v3 router).
 
 ## Usage
 
