@@ -23,8 +23,8 @@ module.exports = class EmberHandlebarsCompiler
 
   compile: (data, path, callback) ->
     try
-      tmplPath = path.replace "app/#{@root}", ''
-      tmplPath = tmplPath.replace sysPath.extname(tmplPath), ''
+      tmplPath = path.replace sysPath.join('app', @root), ''
+      tmplPath = tmplPath.substr 0, tmplPath.length - sysPath.extname(tmplPath).length
       tmplName = "Ember.TEMPLATES['#{tmplPath}']"
       if @precompile is on
         content = compileHBS data.toString()
