@@ -15,15 +15,14 @@ module.exports = class EmberHandlebarsCompiler
     if @config.files.templates.precompile is on
       @precompile = on
     if @config.files.templates.root?
-      @root = sysPath.normalize(@config.files.templates.root)
-      @root += sysPath.sep if @root[@root.length - 1] isnt sysPath.sep
+      @root = sysPath.join 'app', @config.files.templates.root, sysPath.sep
     if @config.modules.wrapper is on
       @modulesPrefix = 'module.exports = '
     null
 
   compile: (data, path, callback) ->
     try
-      tmplPath = path.replace sysPath.join('app', @root), ''
+      tmplPath = path.replace @root, ''
       tmplPath = tmplPath.substr 0, tmplPath.length - sysPath.extname(tmplPath).length
       tmplName = "Ember.TEMPLATES['#{tmplPath}']"
       if @precompile is on
