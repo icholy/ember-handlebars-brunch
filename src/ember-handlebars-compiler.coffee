@@ -6,6 +6,8 @@ module.exports = (->
   vm      = require 'vm'
   sysPath = require 'path'
 
+  sysPath.sep = '/' if process.platform is 'win32'
+
   compilerPath     = sysPath.join __dirname, '..', 'vendor', 'ember-template-compiler.js'
   compilerjs    = fs.readFileSync compilerPath, 'utf8'
 
