@@ -1,3 +1,7 @@
+# Warning
+
+I've stopped using ember and am no longer maintaining this repository.  Support for this project will continue to be provided by [bartsqueezy](https://github.com/bartsqueezy) within the new [ember-handlebars-brunch repo](https://github.com/bartsqueezy/ember-handlebars-brunch).
+
 ## Ember Handlebars for Brunch
 
 This plugin adds [Ember Handlebars](http://emberjs.com/) template pre-compiling to
